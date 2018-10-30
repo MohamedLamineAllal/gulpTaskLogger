@@ -131,7 +131,8 @@ Using the same properties some there values come from options, each one of the p
 
 ### There is 7 properties:
 
-
+|  Properties   |
+| ------------- |
 |  taskName     | 
 |  time         |
 |  startMessage |
