@@ -2,7 +2,7 @@
 
 A helper for gulp, to log at task start, end, and any other log, with time, and string formatting, and collor personalisation, and more .., Can be used as a cli program loggin helper too out of gulp.
 
-![gulp-task-logger in action]( https://github.com/MohamedLamineAllal/gulpTaskLogger/blob/master/images/gulp_TaskLogger.png  "gulp-task-logger in action")
+![gulp-task-logger in action]( https://raw.githubusercontent.com/MohamedLamineAllal/gulpTaskLogger/master/images/gulp_TaskLogger.png  "gulp-task-logger in action")
 
 
 ##Notice:
