@@ -14,8 +14,8 @@ const tl = new TaskLogger();
 // here a watch task
 gulp.task('watch', function (done) {
     //json comments 
-    var base = path.join(__dirname, 'app/tempGulp/json/')
-    watch('./app/tempGulp/json/**/*.json', function (evt) {
+    var base = path.join(__dirname, './gulp-temp-json')
+    watch('./gulp-temp-json/**/*.json', function (evt) {
         // console.log('hi there ');
         jsonCommentWatchEvt = evt
         jsonComment()

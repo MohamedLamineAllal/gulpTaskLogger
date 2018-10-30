@@ -1,0 +1,120 @@
+{
+    "terminalEmulator": {
+        "default": "gnome-terminal",
+        "listOfEmulators": {
+            "gnome-terminal": {
+                "launchCommand": {
+                    "exiting": "gnome-terminal -x bash -c \"***cmd***\"",
+                    "persistant": "gnome-terminal -x bash -c \"***cmd***;exec bash\""
+                }
+            }
+        }
+    },
+
+    "xtermTerminal": {
+
+        "options": {
+            "cursorBlink": true,
+            "cursorStyle": "block",
+            "macOptionIsMeta": false,
+            "scrollback": 9999,
+            "tabstopwidth": 8,
+            "bellStyle": "both",
+            "screenReaderMode": false,
+            "fontFamily": "'monospace','Monaco', 'PT-mono', 'Space-mono'",
+            "fontWeight": 500,
+            "fontSize": 16,
+            "lineHeight": 1,
+            "rightClickSelectsWord": true,
+
+            "theme": {
+                "foreground": "#DDDDDD"
+
+            }
+        },
+        "size": {
+            "cols": 80,
+            "rows": 30,
+            "padding": 0
+        },
+        "resizeTimeOut": 30
+    },
+    "splitHandling": {
+        "defaultInitialSplitHorizontal": {
+            "sizes": [
+                20,
+                60,
+                20
+            ],
+            "minSize": [
+                100,
+                300,
+                100
+            ]
+        },
+        "defaultInitialSplitVertical": {
+            "sizes": [
+                60,
+                40
+            ],
+            "minSize": [
+                100,
+                100
+            ]
+        },
+        "collapsibleElementsOption": {
+
+            "defaultLastSize": 25
+        }
+    },
+    "quickTerminals": {
+        "keyboardShortcut": "Ctrl+T"
+    },
+    "quickControllBar": {
+        "onDrageResize_timeout": 50,
+        "onWindowResize_timeout": 50
+    },
+    "aceEditor": {
+        "options": {
+
+            "selectionStyle": "line",
+            "highlightActiveLine": true,
+            "highlightSelectedWord": true,
+            "cursorStyle": "ace",
+            "behavioursEnabled": true,
+            "wrapBehavioursEnabled": true,
+            "copyWithEmptySelection": true, 
+            "useSoftTabs": true,
+            "navigateWithinSoftTabs": true,
+
+            "animatedScroll": true,
+
+            "fontSize": "16px",
+            "fontFamily": "'monoDroidSans', 'Monaco', Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+
+            "theme": "ace/theme/tomorrow_night_eighties", 
+
+            "tabSize": 4,
+            "wrap": true,
+            "mode": "ace/mode/text",
+
+            "enableEmmet": true,
+            "enableBasicAutocompletion": true,
+            "enableLiveAutocompletion": true,
+            "enableSnippets": true,
+            "spellcheck": true
+        }
+    },
+    "editing": {
+        "tabListAutoScroll": {
+            "animate": true,
+            "animationDuration": 400,
+            "animationFramePerSec": 60
+        },
+
+        "editingFileOpening": {
+            "numberOfAttemptFileOperation": 10,
+            "sleepTimeBetweenAttemptFileOperation": 100
+        }
+    }
+}
