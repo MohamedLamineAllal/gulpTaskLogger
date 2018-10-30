@@ -93,6 +93,7 @@ const tl = new TaskLogger({
 ```
 
 ## list of options at initialisation
+.
 
 ```javascript
 {
