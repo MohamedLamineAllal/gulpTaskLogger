@@ -92,7 +92,7 @@ const tl = new TaskLogger({
 });
 ```
 
-## list of options at initialisation
+## List of options properties
 
 ```javascript
 {
