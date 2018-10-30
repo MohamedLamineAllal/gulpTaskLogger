@@ -146,12 +146,15 @@ prcise using this keyword your formatting, then set there value in options too, 
 
 ## logging
 3 functions for know
+```javascript
 log() // by default log a message + time at start
 endLog() // By default show end task message equivalent to the default one of gulp
 startLog() // same but for start
+```
 With options you can change the formatting as the value of each part of the properties.
 
-## task()
+## task()
+
 ```javascript
 tl.task('myTaskName') // this set which task you want to log about
 ```
