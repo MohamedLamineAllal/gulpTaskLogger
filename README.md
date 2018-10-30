@@ -94,8 +94,6 @@ const tl = new TaskLogger({
 
 ## list of options at initialisation
 
-Here it is
-
 ```javascript
 {
     taskName: '',
