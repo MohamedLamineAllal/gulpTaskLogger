@@ -1,6 +1,6 @@
 {
   "name": "gulp-task-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a helper to log at task start, end, and any other log, with time, and string formatting, and collor personalisation, and more ..",
   "main": "index.js",
   "scripts": {
