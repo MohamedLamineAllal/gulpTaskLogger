@@ -1,0 +1,142 @@
+{
+    "terminalEmulator": {
+        "default": "gnome-terminal",
+        "listOfEmulators": {
+            "gnome-terminal": {
+                "launchCommand": {
+                    "exiting": "gnome-terminal -x bash -c \"***cmd***\"",
+                    "persistant": "gnome-terminal -x bash -c \"***cmd***;exec bash\""
+                }
+            }
+        }
+    },
+    // xterm settings and options 
+    "xtermTerminal": {
+        // most important options are here, you can pass theme to the constructor and you can also set theme, using setOption('option name', 'value')
+        "options": {
+            "cursorBlink": true,
+            "cursorStyle": "block",
+            "macOptionIsMeta": false,
+            "scrollback": 9999,
+            "tabstopwidth": 8,
+            "bellStyle": "both",
+            "screenReaderMode": false,
+            "fontFamily": "'monospace','Monaco', 'PT-mono', 'Space-mono'",
+            "fontWeight": 500,
+            "fontSize": 16,
+            "lineHeight": 1,
+            "rightClickSelectsWord": true,
+            // the theme go here 
+            "theme": {
+                "foreground": "#DDDDDD"
+                // "background": "#202020",
+                // "cursor": "#F2FF27"
+                // black?: string;
+                // red?: string;
+                // green?: string;
+                // yellow?: string;
+                // blue?: string;
+                // magenta?: string;
+                // cyan?: string;
+                // white?: string;
+                // brightBlack?: string;
+                // brightRed?: string;
+                // brightGreen?: string;
+                // brightYellow?: string;
+                // brightBlue?: string;
+                // brightMagenta?: string;
+                // brightCyan?: string;
+                // brightWhite?: string;
+            }
+        },
+        "size": {
+            "cols": 80,
+            "rows": 30,
+            "padding": 0
+        },
+        "resizeTimeOut": 30
+    },
+    "splitHandling": {
+        "defaultInitialSplitHorizontal": {
+            "sizes": [
+                20,
+                60,
+                20
+            ],
+            "minSize": [
+                100,
+                300,
+                100
+            ]
+        },
+        "defaultInitialSplitVertical": {
+            "sizes": [
+                60,
+                40
+            ],
+            "minSize": [
+                100,
+                100
+            ]
+        },
+        "collapsibleElementsOption": {
+            //"collapseClassName": "SCE_split_collapse",
+            "defaultLastSize": 25
+        }
+    },
+    "quickTerminals": {
+        "keyboardShortcut": "Ctrl+T"
+    },
+    "quickControllBar": {
+        "onDrageResize_timeout": 50,
+        "onWindowResize_timeout": 50
+    },
+    "aceEditor": {
+        "options": {
+            //------ editor options
+            "selectionStyle": "line",
+            "highlightActiveLine": true,
+            "highlightSelectedWord": true,
+            "cursorStyle": "ace",
+            "behavioursEnabled": true,
+            "wrapBehavioursEnabled": true,
+            "copyWithEmptySelection": true, // if no selection when we copy the whole line is copied
+            "useSoftTabs": true,
+            "navigateWithinSoftTabs": true,
+            //----- renderer options (here there is fonts styling)
+            "animatedScroll": true,
+            // shortcut for showPrintMargin and printMarginColumn
+            //font config go here 
+            "fontSize": "16px",
+            "fontFamily": "'monoDroidSans', 'Monaco', Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+            //theme here 
+            "theme": "ace/theme/tomorrow_night_eighties", //path to a theme 
+            // "theme": "ace/theme/mono_industrial", //path to a theme 
+            // "theme": "ace/theme/merbivore_soft", //path to a theme 
+            // "theme": "ace/theme/merbivore", //path to a theme 
+            // "theme": "ace/theme/clouds_midnight", //path to a theme 
+            //---- session options
+            "tabSize": 4,
+            "wrap": true,
+            "mode": "ace/mode/text",
+            //---- editor options defined by extensions
+            "enableEmmet": true,
+            "enableBasicAutocompletion": true,
+            "enableLiveAutocompletion": true,
+            "enableSnippets": true,
+            "spellcheck": true
+        }
+    },
+    "editing": {
+        "tabListAutoScroll": {
+            "animate": true,
+            "animationDuration": 400,
+            "animationFramePerSec": 60
+        },
+        // config about opening file for editing
+        "editingFileOpening": {
+            "numberOfAttemptFileOperation": 10,
+            "sleepTimeBetweenAttemptFileOperation": 100
+        }
+    }
+}
