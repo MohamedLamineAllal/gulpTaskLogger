@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gulp": "^4.0.0",
     "gulp-strip-json-comments": "^3.0.0",
     "gulp-task-logger": "^1.0.0",
     "gulp-watch": "^5.0.1",

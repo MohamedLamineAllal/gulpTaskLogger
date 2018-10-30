@@ -2,6 +2,9 @@
 
 A helper for gulp, to log at task start, end, and any other log, with time, and string formatting, and collor personalisation, and more .., Can be used as a cli program loggin helper too out of gulp.
 
+![gulp-task-logger in action](https://github.com/MohamedLamineAllal/gulpTaskLogger/images/gulp_TaskLogger.png "gulp-task-logger in action")
+
+
 ##Notice:
 Gulp version 4 have no gulp.start(), logging the start and end of our tasks can be just important, gulp-task-logger is a nice helper that make it a breeze.
 
@@ -166,6 +169,9 @@ tl.task('myTaskName').log('myMessage'); // log right away and each time
 ```
 note *task()* return the instance itself, you can use any of the available methods.
 
+## colors
+gulp-task-logger deppend on '[colors]()'
+So you can use any of the colors it provide.
 
 
 Here you can find a test example:
