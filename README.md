@@ -175,7 +175,7 @@ So you can use any of the colors it provide.
 
 
 Here you can find a test example:
-https://github.com/MohamedLamineAllal/gulpTaskLogger/test
+https://github.com/MohamedLamineAllal/gulpTaskLogger/tree/master/test
 
 ////// documentation to be continued! 
 
