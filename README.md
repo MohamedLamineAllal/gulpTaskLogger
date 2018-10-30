@@ -93,6 +93,7 @@ const tl = new TaskLogger({
 ```
 
 ## list of options at initialisation
+
 ```javascript
 {
     taskName: '',
@@ -113,10 +114,12 @@ const tl = new TaskLogger({
     logFormat: '[time] msg' //'[time] prefix msg'
 }
 ```
-Explanation:
-three section
+### Explanation:
 
-Formatting: 
+three sections:
+
+### Formatting: 
+
 ```javascript
 {
     startMsgFormat: '[time] startMessage \'taskName\'...',
@@ -126,8 +129,9 @@ Formatting:
 ```
 Using the same properties some there values come from options, each one of the properties will be replaced with it's corresponding value, all properties have a default value, even if you don't precise it (defaulting to '').
 
-There is 7 properties:
------------------
+### There is 7 properties:
+
+
 |  taskName     | 
 |  time         |
 |  startMessage |
@@ -135,7 +139,7 @@ There is 7 properties:
 |  msg          |
 |  prefix       |
 |  duration     |
------------------
+
 
 prcise using this keyword your formatting, then set there value in options too, except duration, and time, and msg. The two first automatically calculated, and msg you provide, when calling one of the three logging functions.
 
