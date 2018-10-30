@@ -170,7 +170,7 @@ tl.task('myTaskName').log('myMessage'); // log right away and each time
 note *task()* return the instance itself, you can use any of the available methods.
 
 ## colors
-gulp-task-logger deppend on '[colors]()'
+gulp-task-logger deppend on '[colors](https://www.npmjs.com/package/colors)'
 So you can use any of the colors it provide.
 
 
