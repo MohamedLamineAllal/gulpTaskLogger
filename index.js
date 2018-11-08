@@ -58,7 +58,7 @@ var TaskLogger = function (options) {
             endMessage: this.endMessage,
             prefix: this.prefix,
             msg,
-            duration
+            duration: this.endGetDuration()
         }));
     }
 
