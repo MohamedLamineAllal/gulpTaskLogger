@@ -185,25 +185,31 @@ const gulp = require('gulp');
 const TaskLogger = require('gulp-task-logger') // <=======
 const fs = require('fs');
 const path = require('path');
+const {execSync} = require('child_process');
+
 
 const tl = new TaskLogger();//<---------------
 
 
 let watcher;
 function watchBlade(done) {
-    watcher = gulp.watch(['resources/views/**/*']);
+    watcher = gulp.watch(['resources/views/**/*']); 
 
     // watcher.on('add', function (pth) {
-    watcher.on('change', function (state) { // we can move this function to a named one. so we can reuse it
+    watcher.on('change', function (state) { 
         if(state.type === 'added') {
-            tl.task('blade-extension').startLog(); // <========
+            // we can make this task on it's own named function
+            tl.task('blade-extension').startLog();//<========= task start
             parsed = path.parse(state.path);
             if(parsed.base.indexOf('.') === -1) {
-                fs.renameSync(state.path, path.join(parsed.dir, parsed.base + '.blade.php'));
-                tl.log('file: ' + state.path + '\nwas been created.');// <===========
+                let newName = path.join(parsed.dir, parsed.base + '.blade.php');
+
+                fs.renameSync(state.path, newName);
+                tl.log('file: ' + state.path + '\nwas been created.');//<=======
                 
-                tl.endLog(); //<===========
+                execSync(`code ${newName}`);
             } 
+            tl.endLog();//<======================== task end
         }
     });
     done();
