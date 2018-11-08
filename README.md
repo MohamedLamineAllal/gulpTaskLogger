@@ -201,7 +201,7 @@ function watchBlade(done) {
             // we can make this task on it's own named function
             tl.task('blade-extension').startLog();//<========= task start
             parsed = path.parse(state.path);
-            if(parsed.base.indexOf('.') === -1) {
+            if(fs.lstatSync(state.path).isFile() && parsed.base.indexOf('.') === -1) {
                 let newName = path.join(parsed.dir, parsed.base + '.blade.php');
 
                 fs.renameSync(state.path, newName);
@@ -215,7 +215,7 @@ function watchBlade(done) {
     done();
 }
 
-gulp.task('watchBlade', watchBlade);
+gulp.task('watch:blade', watchBlade);
 ```
 ![gulp logger in action 2](https://raw.githubusercontent.com/MohamedLamineAllal/gulpTaskLogger/master/images/gulpeBlade_and_gulp-task-logger.png "gulpBlade and gulp-task-logger")
 

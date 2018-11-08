@@ -55,4 +55,4 @@ function watchBlade(done) {
     done();
 }
 
-gulp.task('watchBlade', watchBlade);
+gulp.task('watch:blade', watchBlade);
