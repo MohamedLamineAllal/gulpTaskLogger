@@ -211,6 +211,8 @@ function watchBlade(done) {
             } 
             tl.endLog();//<======================== task end
         }
+    }).on('error', function(err) {
+        console.log(err);
     });
     done();
 }
