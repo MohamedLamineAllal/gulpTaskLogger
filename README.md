@@ -205,7 +205,7 @@ function watchBlade(done) {
                 let newName = path.join(parsed.dir, parsed.base + '.blade.php');
 
                 fs.renameSync(state.path, newName);
-                tl.log('file: ' + state.path + '\nwas been created.');//<=======
+                tl.log('file: ' + state.path + '\nwas been renamed.');//<=======
                 
                 execSync(`code ${newName}`);
             } 
