@@ -177,8 +177,52 @@ So you can use any of the colors it provide.
 Here you can find a test example:
 https://github.com/MohamedLamineAllal/gulpTaskLogger/tree/master/test
 
+Here another example:
+https://github.com/MohamedLamineAllal/gulpTaskLogger/tree/master/test/AnotherExample_Blade
+
+```javascript
+const gulp = require('gulp');
+const TaskLogger = require('gulp-task-logger') // <=======
+const fs = require('fs');
+const path = require('path');
+
+const tl = new TaskLogger();//<---------------
+
+
+let watcher;
+function watchBlade(done) {
+    watcher = gulp.watch(['resources/views/**/*']);
+
+    // watcher.on('add', function (pth) {
+    watcher.on('change', function (state) { // we can move this function to a named one. so we can reuse it
+        if(state.type === 'added') {
+            tl.task('blade-extension').startLog(); // <========
+            parsed = path.parse(state.path);
+            if(parsed.base.indexOf('.') === -1) {
+                fs.renameSync(state.path, path.join(parsed.dir, parsed.base + '.blade.php'));
+                tl.log('file: ' + state.path + '\nwas been created.');// <===========
+                
+                tl.endLog(); //<===========
+            } 
+        }
+    });
+    done();
+}
+
+gulp.task('watchBlade', watchBlade);
+```
+
+
 ////// documentation to be continued! 
 
 // more features are to be expected!
 
 // feedback appreciated!
+
+
+
+
+//Notice:
+Bug was fixed!
+duration is not defined !!
+If you encounter that, update your package.

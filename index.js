@@ -51,6 +51,7 @@ var TaskLogger = function (options) {
     }
 
     this.log = function (msg) {
+        this.tasks[this.taskName].end = new Date();
         console.log(getStringFromFormat.call(this, this.logFormat, {
             taskName: this.taskName,
             time: this.timeString(),
@@ -93,7 +94,9 @@ var TaskLogger = function (options) {
     }
 
     this.endGetDuration = function () {
-        return prettyMs(this.tasks[this.taskName].end - this.tasks[this.taskName].start);
+        if(this.tasks[this.taskName].start) {
+            return prettyMs(this.tasks[this.taskName].end - this.tasks[this.taskName].start);
+        }
     }
 
     this.init(options);
