@@ -219,7 +219,7 @@ function watchBlade(done) {
 
 gulp.task('watch:blade', watchBlade);
 ```
-![gulp logger in action 2](https://raw.githubusercontent.com/MohamedLamineAllal/gulpTaskLogger/master/images/gulpeBlade_and_gulp-task-logger.png "gulpBlade and gulp-task-logger")
+![gulp logger in action 2](https://raw.githubusercontent.com/MohamedLamineAllal/gulpTaskLogger/master/images/gulpeBlade%20and%20gulp-task-logger.png "gulpBlade and gulp-task-logger")
 
 ////// documentation to be continued! 
 
